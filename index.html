@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>La Tanière Fertile - Ferme connectée</title>
   <link rel="stylesheet" href="style.css">
+  <script src="animations.js" defer></script>
 </head>
 <body>
   <header>
@@ -43,6 +44,13 @@
         <li><strong>Grafana</strong> : interface visuelle permettant de créer des tableaux de bord dynamiques pour le suivi des capteurs.</li>
         <li><strong>Telegram Bot</strong> : envoie automatiquement des alertes en cas d’anomalie détectée (bruit fort, panne...)</li>
       </ul>
+      <ol class="workflow">
+        <li>LoRaWAN <span>&rarr;</span> MQTT</li>
+        <li>MQTT <span>&rarr;</span> Telegraf</li>
+        <li>Telegraf <span>&rarr;</span> InfluxDB</li>
+        <li>InfluxDB <span>&rarr;</span> Grafana</li>
+        <li>Grafana <span>&rarr;</span> Bot Telegram</li>
+      </ol>
       <p>Toutes ces briques communiquent entre elles pour permettre au fermier une gestion simple, efficace et accessible depuis un navigateur.</p>
     </section>
   </main>
