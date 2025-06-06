@@ -128,6 +128,22 @@ body {
   font-size: 1rem;
   margin-bottom: 10px;
 }
+.workflow {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
+}
+.workflow li {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+.workflow span {
+  margin: 0 6px;
+}
+
 
 iframe {
   border-radius: 12px;
@@ -143,6 +159,18 @@ iframe {
   justify-content: center;
   margin-top: 20px;
 }
+.action-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+}
+.action-item p {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
 
 .controls button {
   padding: 12px 20px;
@@ -173,6 +201,26 @@ footer {
   align-items: center;
   gap: 10px;
 }
+.pulse {
+  animation: pulse 4s infinite;
+}
+
+.wiggle {
+  animation: wiggle 0.5s;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
+}
+
 
 footer img {
   height: 40px;
