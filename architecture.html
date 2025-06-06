@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architecture - La Tanière Fertile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Architecture Technique</h1>
+    <p>Comment fonctionne le système de La Tanière Fertile</p>
+  </header>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="graph.html">Dashboards</a>
+    <a href="actions.html">Actions</a>
+    <a href="telegram.html">Telegram</a>
+    <a href="carte.html">Carte</a>
+    <a href="architecture.html">Architecture</a>
+    <a href="credits.html">Crédits</a>
+  </nav>
+  <main>
+    <section class="content">
+      <h2>📡 Architecture globale</h2>
+      <p>Voici le fonctionnement technique de La Tanière Fertile :</p>
+      <ol>
+        <li><strong>Capteurs LoRaWAN</strong> : détectent bruit/température/humidité dans le poulailler.</li>
+        <li><strong>Passerelle TTN</strong> : transmet les données capteurs au cloud TTN (The Things Network).</li>
+        <li><strong>MQTT Broker</strong> : sert de pont pour transférer les données vers nos serveurs.</li>
+        <li><strong>Telegraf</strong> : collecteur intelligent qui écoute MQTT et envoie vers InfluxDB.</li>
+        <li><strong>InfluxDB</strong> : base de données temporelle où les données sont stockées.</li>
+        <li><strong>Grafana</strong> : tableaux de bord pour visualiser les données en temps réel.</li>
+        <li><strong>Bot Telegram</strong> : notifie automatiquement le fermier en cas d'anomalie.</li>
+        <li><strong>Interface Web</strong> : pages HTML pour commander et visualiser.</li>
+      </ol>
+      <img src="images/schema_architecture.png" alt="Schéma architecture" style="width:100%; max-width:700px; margin:2rem auto; display:block; border-radius:12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+      <p style="text-align:center; font-style:italic;">Architecture de la ferme connectée - simplifiée</p>
+    </section>
+  </main>
+  <footer>
+    <img src="images/pomme.png" alt="Logo ferme" />
+    <img src="images/logoiut.png" alt="Logo IUT" />
+    <img src="images/lora.png" alt="Logo LoRaWAN" />
+    <p>&copy; 2025 La Tanière Fertile. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>

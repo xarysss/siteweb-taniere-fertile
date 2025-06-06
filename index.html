@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Tanière Fertile - Ferme connectée</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Bienvenue à <strong>La Tanière Fertile</strong></h1>
+    <p>Une ferme intelligente et connectée pilotée depuis le web</p>
+  </header>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="graph.html">Dashboards</a>
+    <a href="actions.html">Actions</a>
+    <a href="telegram.html">Telegram</a>
+    <a href="carte.html">Carte</a>
+    <a href="credits.html">Crédits</a>
+  </nav>
+  <main>
+    <section>
+      <h2>Présentation du projet</h2>
+      <p>La Tanière Fertile est une ferme expérimentale connectée, développée par des étudiants de l’IUT Réseaux & Télécoms. Ce site permet au fermier et à ses acolytes de :</p>
+      <ul>
+        <li>📊 Surveiller les données en temps réel via Grafana</li>
+        <li>💡 Contrôler les équipements à distance (effaroucheur, lampe, clim...)</li>
+        <li>📍 Localiser les dispositifs sur une carte</li>
+        <li>📲 Recevoir des alertes via un bot Telegram</li>
+      </ul>
+      <p>Explorez les différentes sections via la navigation ci-dessus.</p>
+    </section>
+
+    <section>
+      <h2>🧠 Comment fonctionne notre système</h2>
+      <p>Notre ferme connectée repose sur une architecture moderne composée des briques suivantes :</p>
+      <ul>
+        <li><strong>Capteurs LoRaWAN</strong> : transmettent les données environnementales (bruit, température...) sur de longues distances avec très faible consommation.</li>
+        <li><strong>MQTT</strong> : protocole léger utilisé pour publier les données vers nos serveurs.</li>
+        <li><strong>Telegraf</strong> : agent chargé de collecter, transformer et envoyer les données vers InfluxDB.</li>
+        <li><strong>InfluxDB</strong> : base de données spécialisée dans les séries temporelles, stocke toutes les mesures de capteurs.</li>
+        <li><strong>Grafana</strong> : interface visuelle permettant de créer des tableaux de bord dynamiques pour le suivi des capteurs.</li>
+        <li><strong>Telegram Bot</strong> : envoie automatiquement des alertes en cas d’anomalie détectée (bruit fort, panne...)</li>
+      </ul>
+      <p>Toutes ces briques communiquent entre elles pour permettre au fermier une gestion simple, efficace et accessible depuis un navigateur.</p>
+    </section>
+  </main>
+  <footer>
+    <img src="images/pomme.png" alt="Logo ferme" />
+    <img src="images/logoiut.png" alt="Logo IUT" />
+    <img src="images/lora.png" alt="Logo LoRaWAN" />
+    <p>&copy; 2025 La Tanière Fertile. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
